@@ -1,13 +1,12 @@
 from classroom.asignatura import Asignatura
 
 class Grupo:
-    grado = None
+    grado = "Grado 12" 
 
-    def __init__(self, grupo="grupo ordinado", asignaturas=None, estudiantes=None, grado='Grado 12', **kwargs):
+    def __init__(self, grupo="grupo ordinado", asignaturas=None, estudiantes=None, **kwargs):
         self._grupo = grupo
         self._asignaturas = asignaturas if asignaturas is not None else []
         self.listadoAlumnos = estudiantes if estudiantes is not None else []
-        self.grado = grado
 
     def listadoAsignaturas(self, **kwargs):
         for x in kwargs.values():
